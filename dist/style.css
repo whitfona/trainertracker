@@ -125,9 +125,9 @@ section {
 }
 
 .border {
-  border: var(--primary-grey) 2px solid;
+  /* border: var(--primary-grey) 2px solid; */
   padding: 2rem;
-  box-shadow: #333 10px 10px 20px;
+  box-shadow: #bbb 5px 5px 15px;
 }
 
 .li-grid {
