@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/65f79fa78a.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Trainer Tracker</title>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <h1 id="title" class="title-lg">TRAINER TRACKER</h1>
+      <div class="grid-container-all">
+        <div id="goals" class="border">
+          <h2 class="title-md">Goals</h2>
+          <ul id="goal-list">
+            <!-- <li class="li-grid px-1">
+              <p>Goal #1</p>
+              <div>
+                <i class="fas fa-check"></i><i class="fas fa-times"></i>
+              </div>
+            </li>
+            <li class="li-grid px-1">
+              <p>Goal #2</p>
+              <div>
+                <i class="fas fa-check"></i><i class="fas fa-times"></i>
+              </div>
+            </li>
+            <li class="li-grid px-1">
+              <p>Goal #3</p>
+              <div>
+                <i class="fas fa-check"></i><i class="fas fa-times"></i>
+              </div>
+            </li> -->
+          </ul>
+          <input type="text" name="goal" id="goal-input" placeholder="Enter Goal" class="input-text" />
+          <div class="btn-centre">
+            <a href="#" class="btn-primary" id="btn-goals">Add</a>
+          </div>
+        </div>
+
+        <div id="nutrition" class="border">
+          <h2 class="title-md">Nutrition</h2>
+          <div id="mac"></div>
+          <div class="nutrition-inner-grid-container">
+            <input type="number" name="calories" id="target-calories" placeholder="Enter Calories" class="input-text"
+              max="10000" />
+            <input type="number" name="protein" id="target-protein" placeholder="Enter Protein %" class="input-text"
+              min="0" max="100" />
+            <input type="number" name="fats" id="target-fats" placeholder="Enter Fats %" class="input-text" min="0"
+              max="100" />
+            <input type="number" name="carbs" id="target-carbs" placeholder="Enter Carbs %" class="input-text" min="0"
+              max="100" />
+            <p>
+              Target Calories: <span id="target-calories-output"></span>
+            </p>
+            <p>
+              Target Protein: <span id="target-protein-output"></span> %
+            </p>
+            <p>Target Fats: <span id="target-fats-output"></span> %</p>
+            <p>Target Carbs: <span id="target-carbs-output"></span> %</p>
+            <div></div>
+            <p class="bold">
+              Target Protein: <span id="target-protein-output-grams"></span> g
+            </p>
+            <p class="bold">Target Fats: <span id="target-fats-output-grams"></span> g</p>
+            <p class="bold">Target Carbs: <span id="target-carbs-output-grams"></span> g</p>
+          </div>
+          <div class="btn-centre">
+            <a href="#" class="btn-primary" id="btn-nutrition">Calculate</a>
+          </div>
+        </div>
+
+        <div id="training-schedule" class="border">
+          <h2 class="title-md">Training Schedule</h2>
+          <div class="training-schedule-grid-container">
+            <div></div>
+            <h2 class="title-sm">Mon</h2>
+            <h2 class="title-sm">Tues</h2>
+            <h2 class="title-sm">Wed</h2>
+            <h2 class="title-sm">Thurs</h2>
+            <h2 class="title-sm">Fri</h2>
+            <h2 class="title-sm">Sat</h2>
+            <h2 class="title-sm">Sun</h2>
+            <h2>AM</h2>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <div></div>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <h2>PM</h2>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <select name="type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <div></div>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+            <select name="intensity" class="training-schedule-intensity">
+              <option value="Endurance">Endurance</option>
+              <option value="HIIT">HIIT</option>
+              <option value="Intervals">Intervals</option>
+              <option value="Recovery">Recovery</option>
+              <option value="Tempo">Tempo</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="training-summary" class="border">
+          <h2 class="title-md">Training Summary</h2>
+          <div class="training-summary-grid-container">
+            <input type="date" name="date" id="training-date" />
+            <select name="day/night" id="am-pm-toggle">
+              <option value="am">AM</option>
+              <option value="pm">PM</option>
+            </select>
+            <select name="type" id="training-type" class="training-schedule-type">
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Run">Run</option>
+              <option value="Lift">Lift</option>
+              <option value="Rest">Rest</option>
+            </select>
+            <input type="number" name="rpe" id="rpe" placeholder="RPE" min="0" max="10" class="input-text" />
+            <textarea name="notes" id="notes" cols="30" rows="3" class="input-text"></textarea>
+            <div>
+              <a href="#" class="btn-primary" id="btn-training-summary">Add</a>
+            </div>
+          </div>
+          <!-- <p>April 1, 2020</p>
+            <p>AM</p>
+            <p>Bike</p>
+            <p>8</p>
+            <p>Long ride, lots of climbing, almost died</p>
+            <i class="fas fa-times"></i>
+            <div></div>
+            <p>PM</p>
+            <p>Swim</p>
+            <p>3</p>
+            <p>Long easy swim</p>
+            <i class="fas fa-times"></i>
+            <p>April 2, 2020</p>
+            <p>AM</p>
+            <p>Rest</p>
+            <p>0</p>
+            <p></p>
+            <i class="fas fa-times"></i>
+            <div></div>
+            <p>PM</p>
+            <p>Run</p>
+            <p>8</p>
+            <p>Hard Intervals</p>
+            <i class="fas fa-times"></i>
+          </div> -->
+        </div>
+
+        <div id="nutrition-summary" class="border">
+          <h2 class="title-md">Nutrition Summary</h2>
+          <div class="nutrition-summary-outer">
+            <div class="nutrition-summary-grid-container">
+              <input type="date" name="date" id="nutrition-date" />
+              <input type="number" name="weight" id="add-weight" placeholder="Weight" class="input-text" />
+              <input type="number" name="calories" id="add-calories" placeholder="Calories" class="input-text" />
+              <input type="number" name="protein" id="add-protein" placeholder="Protein" class="input-text" />
+              <input type="number" name="fats" id="add-fats" placeholder="Fats" class="input-text" />
+              <input type="number" name="carbs" id="add-carbs" placeholder="Carbs" class="input-text" />
+              <div>
+                <a href="#nutrition-summary" class="btn-primary" id="btn-nutrition-summary">Add</a>
+              </div>
+
+            </div>
+            <!-- <div>
+              <p>April 1, 2020</p>
+              <p>163 lbs</p>
+              <p>2,843</p>
+              <p>160 g</p>
+              <p>80 g</p>
+              <p>250 g</p>
+              <i class="fas fa-times"></i>
+            </div>
+            <div>
+              <p>April 1, 2020</p>
+              <p>163 lbs</p>
+              <p>2,843</p>
+              <p>160 g</p>
+              <p>80 g</p>
+              <p>250 g</p>
+              <i class="fas fa-times"></i>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+:root {
+  --primary-blue: #2e86de;
+  --primary-red: #ee5253;
+  --primary-grey: #c8d6e5;
+  --secondary-blue: #48dbfb;
+  --secondary-orange: #feca57;
+  --secondary-green: #1dd1a1;
+  --secondary-red: #ff6b6b;
+  --secondary-grey: #8395a7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  color: var(--secondary-grey);
+  padding-left: 0.5rem;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Utility Classes */
+.py-1 {
+  padding-bottom: 0.75rem;
+}
+
+.py-2 {
+  padding-bottom: 2rem;
+}
+
+.py-3 {
+  padding-bottom: 3rem;
+}
+
+.px-1 {
+  padding: 0.75rem 0.75rem;
+}
+
+.px-2 {
+  padding: 0 2rem;
+}
+
+.px-3 {
+  padding: 0 3rem;
+}
+.title-lg {
+  font-size: 4rem;
+}
+
+.input-text {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.title-md {
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--primary-blue);
+  padding-bottom: 2rem;
+}
+
+.title-sm {
+  font-size: 1.3rem;
+}
+
+.btn-centre {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--primary-red);
+  color: #fff;
+  padding: 0.3rem 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 70%;
+  transition: all 0.5s ease-in;
+}
+
+.fa-times,
+.fa-check {
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  color: var(--primary-red);
+  transition: all 0.5s ease-in;
+}
+
+section {
+  margin: auto;
+}
+.container {
+  max-width: 1633px;
+  padding: 4rem 2rem;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.inner-grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.border {
+  border: var(--primary-grey) 2px solid;
+  padding: 2rem;
+  box-shadow: #333 10px 10px 20px;
+}
+
+.li-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+table tr th {
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+table tr td {
+  padding-bottom: 0.5rem;
+}
+
+.error {
+  color: var(--primary-red);
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+/* Title */
+#title {
+  text-align: center;
+  color: var(--primary-blue);
+}
+
+/* Grid for Site */
+.grid-container-all {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'goals nutrition nutrition nutrition'
+    'goals training-schedule training-schedule training-schedule'
+    'training-summary training-summary training-summary training-summary'
+    'nutrition-summary nutrition-summary nutrition-summary nutrition-summary';
+  grid-gap: 2rem;
+}
+
+#goals {
+  grid-area: goals;
+  min-width: 350px;
+}
+
+#training-schedule {
+  grid-area: training-schedule;
+}
+#nutrition {
+  grid-area: nutrition;
+}
+
+#training-summary {
+  grid-area: training-summary;
+}
+
+#nutrition-summary {
+  grid-area: nutrition-summary;
+}
+
+/* TITLE */
+#title {
+  padding-bottom: 2rem;
+}
+
+/* GOALS */
+#btn-goals {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#goals input {
+  width: 96%;
+  margin-top: 1rem;
+}
+#goal-list .li-grid:nth-child(odd) {
+  background: var(--primary-grey);
+}
+
+/* TRAINING SCHEDULE */
+#training-schedule select {
+  font-size: 0.8rem;
+}
+
+.training-schedule-grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-content: center;
+  /* overflow-x: scroll; */
+  grid-gap: 1rem;
+}
+
+#training-schedule .title-sm {
+  padding-bottom: 1rem;
+}
+
+#training-schedule .training-schedule-intensity {
+  margin-bottom: 2rem;
+}
+
+.swim {
+  background: var(--secondary-blue);
+}
+
+.bike {
+  background: var(--secondary-orange);
+}
+
+.run {
+  background: var(--secondary-green);
+}
+
+.lift {
+  background: var(--secondary-red);
+}
+
+.rest {
+  background: var(--secondary-grey);
+}
+
+
+/* NUTRITION */
+#nutrition .nutrition-inner-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  grid-gap: 1rem;
+}
+
+#btn-nutrition {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* TRAINING SUMMARY */
+.training-summary-grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
+.training-summary-grid-container p, .training-summary-grid-container i {
+  padding: 0.5rem;
+}
+
+.training-summary-grid-container #training-date {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.training-summary-grid-container #am-pm-toggle, .training-summary-grid-container #training-type {
+  font-size: 1rem;
+  padding: 1rem;
+} 
+
+.training-summary-grid-container #btn-training-summary {
+  margin-left: 4rem;
+}
+.training-summary-grid-container .fa-times {
+  margin-left: 5.2rem;
+}
+
+/* NUTRITION SUMMARY */
+.nutrition-summary-grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nutrition-summary-grid-container p, .nutrition-summary-grid-container i {
+  padding-left: 1rem;
+}
+
+#nutrition-summary #nutrition-date {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.nutrition-summary-grid-container #btn-nutrition-summary {
+  margin-left: 4rem;
+}
+.nutrition-summary-grid-container .fa-times {
+  margin-left: 5.2rem;
+}
